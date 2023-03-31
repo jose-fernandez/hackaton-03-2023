@@ -25,7 +25,7 @@
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
     "storybook": "start-storybook -p 9001 -c .storybook -s public",
-    "storybook:build": "build-storybook -c .storybook -o .out  -s public"
+    "storybook:build": "build-storybook -c .storybook -o docs  -s public"
   },
   "dependencies": {
     "vue": "^2.5.21",
