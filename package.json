@@ -25,7 +25,8 @@
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
     "storybook": "start-storybook -p 9001 -c .storybook -s public",
-    "storybook:build": "build-storybook -c .storybook -o docs  -s public"
+    "storybook:build": "build-storybook -c .storybook -o docs  -s public",
+    "chromatic": "npx chromatic --project-token=2cb7633460e9 --force-rebuild"
   },
   "dependencies": {
     "vue": "^2.5.21",
@@ -51,6 +52,7 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "babel-preset-vue": "^2.0.2",
+    "chromatic": "^6.17.2",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.9.0",
@@ -63,5 +65,7 @@
     "acorn": "^6.4.1",
     "minimist": "^0.2.1",
     "websocket-extensions": "^0.1.4"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "vue-storybook-example@0.1.0"
 }

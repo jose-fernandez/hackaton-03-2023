@@ -27,7 +27,7 @@ button {
     display:inline-block;
     vertical-align:middle;
     text-decoration:none;
-    color: red;
+    color: black;
     background-color:inherit;
     text-align:center;
     cursor:pointer;
