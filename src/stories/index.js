@@ -22,6 +22,7 @@ configureViewport({
 
 storiesOf('Page|Welcome', module)
     .addParameters({
+        chromatic: { disableSnapshot: true },
         options: {
             selectedAddonPanel: 'storybook-addon-viewport/addon-panel'
         }
@@ -33,6 +34,7 @@ storiesOf('Page|Welcome', module)
 storiesOf('Page|App', module)
     .addDecorator(StoryRouter({}, router.options))
     .addParameters({
+        chromatic: { disableSnapshot: true },
         options: {
             selectedAddonPanel: 'storybook-addon-viewport/addon-panel'
         }
@@ -42,6 +44,9 @@ storiesOf('Page|App', module)
     }));
 
 storiesOf('Components|Button', module)
+    .addParameters({
+        chromatic: { disableSnapshot: true },
+    })
     .add('default', () => ({
         template: '<custom-button>Default Button</custom-button>'
     }))
@@ -65,6 +70,9 @@ storiesOf('Components|Button', module)
     }));
 
 storiesOf('Components|Input', module)
+    .addParameters({
+        chromatic: { disableSnapshot: true },
+    })
     .add('default', () => ({
         template: '<input-text/>'
     }))
@@ -90,6 +98,9 @@ storiesOf('Components|Input', module)
     }));
 
 storiesOf('Components|Checkbox', module)
+    .addParameters({
+        chromatic: { disableSnapshot: true },
+    })
     .add('default', () => ({
         template: `
             <div>
@@ -113,6 +124,9 @@ storiesOf('Components|Checkbox', module)
     }));
 
 storiesOf('Components|RadioButton', module)
+    .addParameters({
+        chromatic: { disableSnapshot: true },
+    })
     .add('default', () => ({
         template: `
             <div>
@@ -139,6 +153,9 @@ storiesOf('Components|RadioButton', module)
     }))
 
 storiesOf('Components|SwitchButton', module)
+    .addParameters({
+        chromatic: { disableSnapshot: true },
+    })
     .add('default', () => ({
         template: `<switch-button></switch-button>`
     }))
@@ -165,6 +182,7 @@ storiesOf('Components|SwitchButton', module)
 
 storiesOf('Components|LazyImage', module)
     .addParameters({
+        chromatic: { disableSnapshot: true },
         options: {
             selectedAddonPanel: 'storybook-addon-viewport/addon-panel'
         }
@@ -195,6 +213,7 @@ storiesOf('Components|LazyImage', module)
 storiesOf('Components|Icon', module)
     .addDecorator(withKnobs)
     .addParameters({
+        chromatic: { disableSnapshot: true },
         options: {
             addonPanelInRight: true,
             selectedAddonPanel: 'storybooks/storybook-addon-knobs'
@@ -244,6 +263,7 @@ storiesOf('Components|Icon', module)
 
 storiesOf('Components|VideoPlayer', module)
     .addParameters({
+        chromatic: { disableSnapshot: true },
         options: {
             selectedAddonPanel: 'storybook-addon-viewport/addon-panel'
         }
@@ -266,6 +286,7 @@ const firstArg = decorate([args => {
 
 storiesOf('Addons|Actions', module)
     .addParameters({
+        chromatic: { disableSnapshot: true },
         options: {
             addonPanelInRight: true,
             selectedAddonPanel: 'storybook/actions/actions-panel'
@@ -329,6 +350,7 @@ storiesOf('Addons|Actions', module)
 storiesOf('Addons|Knobs', module)
     .addDecorator(withKnobs)
     .addParameters({
+        chromatic: { disableSnapshot: true },
         options: {
             addonPanelInRight: true,
             selectedAddonPanel: 'storybooks/storybook-addon-knobs'
@@ -422,6 +444,9 @@ storiesOf('Addons|Knobs', module)
     }));
 
 storiesOf("Addons|Links", module)
+    .addParameters({
+        chromatic: { disableSnapshot: true },
+    })
     .add('linkTo', () => ({
         template: '<custom-button @click="handleClick" rounded>Go to Welcome</custom-button>',
         methods: {
@@ -430,7 +455,7 @@ storiesOf("Addons|Links", module)
     }));
 
 // Writing Stories using Decorators
-// https://storybook.js.org/basics/writing-stories/#using-decorators    
+// https://storybook.js.org/basics/writing-stories/#using-decorators
 // custom styles
 const centerWrapper = {
     position: 'absolute',
@@ -485,6 +510,9 @@ const vueComponent = () => ({
 
 storiesOf('Customs|Decorator/with story function', module)
     .addDecorator(storyFunction)
+    .addParameters({
+        chromatic: { disableSnapshot: true },
+    })
     .add('Button', () => ({
         template: '<custom-button rounded>Centered Button</custom-button>'
     }))
@@ -493,6 +521,9 @@ storiesOf('Customs|Decorator/with story function', module)
     }));
 
 storiesOf('Customs|Decorator/with story component', module)
+    .addParameters({
+        chromatic: { disableSnapshot: true },
+    })
     .addDecorator(storyComponent)
     .add('Button', () => ({
         template: '<custom-button rounded>Centered Button</custom-button>'
@@ -502,6 +533,9 @@ storiesOf('Customs|Decorator/with story component', module)
     }));
 
 storiesOf('Customs|Decorator/with vue component', module)
+    .addParameters({
+        chromatic: { disableSnapshot: true },
+    })
     .addDecorator(vueComponent)
     .add('Button', () => ({
         template: '<custom-button rounded>Centered Button</custom-button>'
