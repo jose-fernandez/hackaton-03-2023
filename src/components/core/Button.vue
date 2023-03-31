@@ -27,7 +27,7 @@ button {
     display:inline-block;
     vertical-align:middle;
     text-decoration:none;
-    color: $secondary;
+    color: red;
     background-color:inherit;
     text-align:center;
     cursor:pointer;
